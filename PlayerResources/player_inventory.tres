@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=9 format=3 uid="uid://djd6vwckdo4ya"]
+[gd_resource type="Resource" script_class="InventoryData" load_steps=13 format=3 uid="uid://djd6vwckdo4ya"]
 
 [ext_resource type="Script" uid="uid://b6whvj5qfr25r" path="res://GUI/inventory/scripts/inventory_data.gd" id="1_81sg6"]
 [ext_resource type="Script" uid="uid://bplgfms2enofd" path="res://GUI/inventory/scripts/slot_data.gd" id="2_48w0o"]
 [ext_resource type="Resource" uid="uid://cixpflhl0cjvo" path="res://Items/gem.tres" id="3_j7hhx"]
 [ext_resource type="Resource" uid="uid://bbsrqbseb3so" path="res://Items/cards/spades2.tres" id="4_24gtk"]
 [ext_resource type="Resource" uid="uid://bwxvoxuhjs2ws" path="res://Items/cards/hearts2.tres" id="5_wrgni"]
+[ext_resource type="Resource" uid="uid://cm8trxkkxowrg" path="res://Items/cards/diamonds2.tres" id="6_81sg6"]
+[ext_resource type="Resource" uid="uid://dkx48toujb506" path="res://Items/cards/crosses2.tres" id="7_48w0o"]
 
 [sub_resource type="Resource" id="Resource_kcj8n"]
 script = ExtResource("2_48w0o")
@@ -24,6 +26,18 @@ item_data = ExtResource("5_wrgni")
 quantity = 1
 metadata/_custom_type_script = "uid://bplgfms2enofd"
 
+[sub_resource type="Resource" id="Resource_j7hhx"]
+script = ExtResource("2_48w0o")
+item_data = ExtResource("6_81sg6")
+quantity = 1
+metadata/_custom_type_script = "uid://bplgfms2enofd"
+
+[sub_resource type="Resource" id="Resource_24gtk"]
+script = ExtResource("2_48w0o")
+item_data = ExtResource("7_48w0o")
+quantity = 1
+metadata/_custom_type_script = "uid://bplgfms2enofd"
+
 [resource]
 script = ExtResource("1_81sg6")
-slots = Array[ExtResource("2_48w0o")]([SubResource("Resource_kcj8n"), SubResource("Resource_l6gtg"), SubResource("Resource_hyr2i"), null, null, null])
+slots = Array[ExtResource("2_48w0o")]([SubResource("Resource_kcj8n"), SubResource("Resource_l6gtg"), SubResource("Resource_hyr2i"), SubResource("Resource_j7hhx"), SubResource("Resource_24gtk"), null])

@@ -54,15 +54,7 @@ func item_pressed() -> void:
 
 func unequip_card(card : ItemData) -> void:
 	if InventoryMenu.items.add_item(slot_data.item_data):
-		match card.cardtype:
-			"spades":
-				InventoryMenu.stats.dmg -= card.cardvalue
-			"hearts":
-				print("remove hearts")
-				InventoryMenu.stats.hp -= card.cardvalue
-				InventoryMenu.stats.max_hp -= card.cardvalue
-				PlayerHud.update_hp(InventoryMenu.stats.hp,InventoryMenu.stats.max_hp)
-		
+		card.card_debuff()
 		InventoryMenu.update_stats()
 		InventoryMenu.cards.remove_item(get_index())
 		card_slots.update_inventory()
@@ -73,7 +65,6 @@ func unequip_card(card : ItemData) -> void:
 func equip_card(card : ItemData) -> void:
 	if InventoryMenu.cards.add_item(card):
 		card.card_buff()
-		
 		InventoryMenu.update_stats()
 		InventoryMenu.items.remove_item(get_index())
 		inventory_slots.update_inventory()

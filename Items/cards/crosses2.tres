@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dkx48toujb506"]
 
 [ext_resource type="Script" uid="uid://bcka7jgcyk46j" path="res://Items/scripts/item_data.gd" id="1_ue6i5"]
-[ext_resource type="Texture2D" uid="uid://lxhspymkapqt" path="res://Items/sprites/cards/hearts2.png" id="2_ue6i5"]
+[ext_resource type="Texture2D" uid="uid://cgsalu06ynmv" path="res://Items/sprites/cards/2-C.png" id="2_ue6i5"]
 
 [resource]
 script = ExtResource("1_ue6i5")
@@ -9,5 +9,5 @@ name = "Spades"
 description = "hearts 2!"
 texture = ExtResource("2_ue6i5")
 type = "card"
-cardtype = "hearts"
+cardtype = "crosses"
 cardvalue = 2
