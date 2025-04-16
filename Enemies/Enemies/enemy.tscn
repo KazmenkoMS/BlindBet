@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnudieju3k484"]
+
+[ext_resource type="Texture2D" uid="uid://bmjan6873e3h5" path="res://Items/sprites/items.png" id="1_3ih25"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bxkaj"]
+
+[node name="Enemy" type="Area2D"]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3ih25")
+region_enabled = true
+region_rect = Rect2(72, 0, 16, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_bxkaj")
